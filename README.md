@@ -3,6 +3,14 @@
 ## Objective
 Build a backend system with three microservices (User, Product, Order) communicating via a message queue (Kafka) for state management, exposed through a unified GraphQL API.
 
+## GraphQL Playground / Explorer
+
+You can access the GraphQL Playground to interact with the API schema and run test queries at the following URL:
+
+https://studio.apollographql.com/graph/Pratilipi-Backend-Assignmen/variant/current/home
+
+
+
 ## Architecture
 - **User Service**: Manages registration, JWT authentication, and profiles. Emits `user.registered`, `user.profile.updated`.
 - **Product Service**: Handles product catalog and inventory. Emits `product.created`, `product.inventory.updated`. Listens to `order.placed`.
