@@ -24,6 +24,11 @@ const handleMessage = async ({ topic, partition, message }) => {
         console.log('Order placed for user:', messageValue.payload.userId);
         break;
       
+      case 'ORDER_SHIPPED':
+        // Handle order shipped event
+        console.log('Order shipped for user:', messageValue.payload.userId);
+        break;
+      
       case 'PRODUCT_CREATED':
         // Handle product created event if needed
         console.log('New product created:', messageValue.payload.productId);

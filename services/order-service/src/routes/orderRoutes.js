@@ -1,5 +1,6 @@
 const express = require('express');
 const orderController = require('../controllers/orderController');
+const orderShipController = require('../controllers/orderShipController');
 
 const router = express.Router();
 
@@ -16,6 +17,7 @@ router
 
 // Special routes
 router.route('/:id/cancel').post(orderController.cancelOrder);
+router.route('/:id/ship').post(orderShipController.shipOrder);
 router.route('/user/:userId').get(orderController.getUserOrders);
 
 module.exports = router;

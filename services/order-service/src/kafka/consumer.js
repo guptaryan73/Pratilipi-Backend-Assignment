@@ -34,6 +34,11 @@ const handleMessage = async ({ topic, partition, message }) => {
         console.log('New user registered:', messageValue.payload.userId);
         break;
       
+      case 'ORDER_SHIPPED':
+        // Handle order shipped event
+        console.log('Order shipped:', messageValue.payload.orderId);
+        break;
+      
       default:
         console.log('Unhandled message type:', messageValue.type);
     }
